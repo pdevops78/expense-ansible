@@ -3,12 +3,6 @@
     name: nginx
     state: latest
 
-#- name: start and enabled nginx service
-#  ansible.builtin.systemd_service:
-#    name: nginx
-#    state: started
-#    enabled: yes
--
 - name: copy expense conf
   ansible.builtin.template:
     src: expense.conf
