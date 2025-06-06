@@ -1,0 +1,21 @@
+- name: Install nginx package
+   ansible.builtin.dnf:
+      name: mysql-server
+      state: latest
+
+- name: start nginx service
+  ansible.builtin.service:
+     name: mysqld
+     state: started
+
+- name: Enabled nginx service
+  ansible.builtin.service:
+      name: mysqld
+      enabled: yes
+
+- name: mysql_secure_installation
+  community.mysql.mysql_user:
+     login_user: root
+     login_password: ExpenseApp@1
+     name: mysql
+     state: present
