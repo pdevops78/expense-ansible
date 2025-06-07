@@ -1,6 +1,11 @@
 - name: set sudo prompt
   ansible.builtin.shell: set-prompt {{component}}
 
+- name: Import code commonly
+  ansible.builtin.import_role:
+    name: prometheus
+    tasks_from: node_exporter.yml
+
 
 
 

@@ -20,8 +20,4 @@
     daemon-reload: yes
     enabled: yes
 
-- name: Import code commonly
-  ansible.builtin.import_role:
-    name: prometheus
-    tasks_from: node_exporter.yml
 
