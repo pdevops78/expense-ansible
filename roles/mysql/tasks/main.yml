@@ -3,10 +3,7 @@
     name: mysql-server
     state: latest
 
-- name: Install Python 3
-  ansible.builtin.dnf:
-    name: python3
-    state: installed
+
 
 - name: Install Python MySQL Client
   ansible.builtin.pip:
