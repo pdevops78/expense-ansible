@@ -3,8 +3,6 @@
     name: mysql-server
     state: latest
 
-
-
 - name: Install Python MySQL Client
   ansible.builtin.pip:
     name:
