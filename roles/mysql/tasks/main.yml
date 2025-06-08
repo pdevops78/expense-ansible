@@ -7,7 +7,6 @@
   ansible.builtin.pip:
     name:
       - PyMySQL
-      - cryptography
     executable: pip3
 
 #- name: Get DB Info credentials
