@@ -12,6 +12,7 @@ curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh |
 nodejs:
 =======
 Licence key : 4131dee04aff51ec348848eaabaf7dfbFFFFNRAL
+e324ceb877e7c1c9725b908cf35fe8a2FFFFNRAL
 npm install newrelic
 NEW_RELIC_APP_NAME=backend NEW_RELIC_LICENSE_KEY=4131dee04aff51ec348848eaabaf7dfbFFFFNRAL node -r newrelic YOUR_MAIN_FILENAME.js
 
@@ -21,4 +22,7 @@ NEW_RELIC_APP_NAME=backend NEW_RELIC_LICENSE_KEY={{ newrelic_licence_key}} node 
 steps to follow:
 ===============
 * install new relic under /app : npm install newrelic --save
-* 
+
+NEW_RELIC_APP_NAME=backend 
+NEW_RELIC_LICENSE_KEY={{newrelic_licence_key}} 
+node -r newrelic YOUR_MAIN_FILENAME.js
