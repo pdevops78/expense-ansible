@@ -28,7 +28,7 @@
   community.mysql.mysql_info:
     login_user: root
     login_password: ExpenseApp@1
-    login_host: 172.31.16.74
+    login_host: mysql-dev.pdevops78.online
     filter: version
   register: mysql_connection_output
   ignore_errors: true
