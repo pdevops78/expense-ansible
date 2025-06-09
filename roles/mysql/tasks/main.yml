@@ -13,7 +13,7 @@
   ansible.builtin.pip:
     name:
       - PyMySQL
-    executable: pip3
+    executable: pip3.9
 
 #- name: Get DB Info credentials
 #  community.mysql.mysql_info:
@@ -28,7 +28,7 @@
   community.mysql.mysql_info:
     login_user: root
     login_password: ExpenseApp@1
-    login_host: 172.31.93.11
+    login_host: 172.31.16.74
     filter: version
   register: mysql_connection_output
   ignore_errors: true
