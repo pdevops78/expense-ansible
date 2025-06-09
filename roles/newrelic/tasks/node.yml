@@ -1,0 +1,4 @@
+- name: install new relic
+  ansible.builtin.shell: npm install newrelic
+   args:
+      chdir: /app
