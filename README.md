@@ -16,3 +16,9 @@ npm install newrelic
 NEW_RELIC_APP_NAME=backend NEW_RELIC_LICENSE_KEY=4131dee04aff51ec348848eaabaf7dfbFFFFNRAL node -r newrelic YOUR_MAIN_FILENAME.js
 
 NEW_RELIC_APP_NAME=backend NEW_RELIC_LICENSE_KEY={{ newrelic_licence_key}} node -r newrelic YOUR_MAIN_FILENAME.js
+
+
+steps to follow:
+===============
+* install new relic under /app : npm install newrelic --save
+* 
