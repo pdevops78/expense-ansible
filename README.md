@@ -26,3 +26,47 @@ steps to follow:
 NEW_RELIC_APP_NAME=backend 
 NEW_RELIC_LICENSE_KEY={{newrelic_licence_key}} 
 node -r newrelic YOUR_MAIN_FILENAME.js
+
+Install Vault:
+=============
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo yum -y install vault
+
+vault credentials:
+==================
+Initial root token 
+hvs.T8WnPWmYmGZkPYlGAHXVmebk
+
+hvs.T8WnPWmYmGZkPYlGAHXVmebk 
+Key 1 eHVr7eLa14r8nlx98L5TD9MT3JqTTXypYfhLSJixz+g=
+
+How to retrieve hashicorp vault data in ansible module?
+=======================================================
+prerequisties:
+--------------
+- Install the hvac Python library.
+- Set environment variables like VAULT_ADDR and VAULT_TOKEN if you prefer not to hardcode them.
+
+Using hashi_vault lookup plugin:
+---------------------------------
+- name: Set secret as a fact
+  set_fact:
+  my_secret: "{{ lookup('hashi_vault', 'secret=secret/data/myapp/config field=password token={{ vault_token }} url=http://your-vault-server:8200') }}"
+
+- name: Show secret
+  debug:
+  msg: "{{ my_secret }}"
+
+how to retrieve hashicorp vault data in terraform ?
+===================================================
+provider "vault" {
+address = "https://your-vault-server:8200"
+token   = var.vault_token
+}
+
+data "vault_generic_secret" "example" {
+path = "secret/data/myapp/config"
+}
+
+
