@@ -57,4 +57,9 @@
     enabled: yes
     daemon_reload: true
 
+- name: new relic nodejs
+  ansible.builtin.import_role:
+    name: newrwlic
+    tasks_from: node.yml
+
 
