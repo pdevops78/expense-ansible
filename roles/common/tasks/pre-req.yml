@@ -7,11 +7,15 @@
   ansible.builtin.file:
     path: "{{ app_loc }}"
     state: directory
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
 
 - name: Download {{component}}
   ansible.builtin.get_url:
     url: https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip
     dest: /tmp/{{ component }}.zip
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
 
 - name: Unarchive {{component}}
   ansible.builtin.unarchive:

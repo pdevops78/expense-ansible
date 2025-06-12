@@ -11,7 +11,7 @@
 
 - name: Add application user
   ansible.builtin.user:
-    name: expense
+    name: "{{ app_user }}"
 
 - name: Import common code
   ansible.builtin.import_role:

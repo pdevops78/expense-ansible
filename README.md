@@ -52,7 +52,7 @@ Using hashi_vault lookup plugin:
 ---------------------------------
 - name: Set secret as a fact
   set_fact:
-  my_secret: "{{ lookup('hashi_vault', 'secret=secret/data/myapp/config field=password token={{ vault_token }} url=http://your-vault-server:8200') }}"
+  my_secret: "{{ lookup('hashi_vault', 'secret=common/data/ssh  token={{ vault_token }} url=http://your-vault-server:8200') }}"
 
 - name: Show secret
   debug:
@@ -68,5 +68,18 @@ token   = var.vault_token
 data "vault_generic_secret" "example" {
 path = "secret/data/myapp/config"
 }
+
+
+gocd envryption string:
+=======================
+https://api.gocd.org/current/#bearer-token-authentication
+ex:
+===
+{
+"a":10,
+"b":20
+}
+cat /tmp/1.json | jq '.a'
+
 
 
