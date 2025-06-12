@@ -59,7 +59,7 @@
 
 - name: new relic nodejs
   ansible.builtin.import_role:
-    name: newrwlic
+    name: newrelic
     tasks_from: node.yml
 
 
