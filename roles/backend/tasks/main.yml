@@ -45,7 +45,7 @@
   community.mysql.mysql_db:
     name: all
     login_user: root
-    login_password: ExpenseApp@1
+    login_password: "{{ mysql_root_password }}"
     login_host: mysql-dev.pdevops78.online
     login_port: 3306
     state: import
