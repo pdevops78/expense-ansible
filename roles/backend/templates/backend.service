@@ -6,7 +6,7 @@ User=expense
 WorkingDirectory=/app
 Environment=DB_HOST="mysql-dev.pdevops78.online"
 Environment=NEW_RELIC_APP_NAME=backend
-Environment=NEW_RELIC_LICENSE_KEY=4131dee04aff51ec348848eaabaf7dfbFFFFNRAL
+Environment=NEW_RELIC_LICENSE_KEY={{ newrelic_licence_key }}
 ExecStart=/bin/node -r newrelic /app/index.js
 SyslogIdentifier=backend
 
