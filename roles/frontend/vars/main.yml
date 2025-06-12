@@ -2,3 +2,4 @@ app_loc : /usr/share/nginx/html
 component : frontend
 logfile : /var/log/nginx/access.log
 env: dev
+app_user: expense
