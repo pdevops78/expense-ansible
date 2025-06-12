@@ -7,10 +7,10 @@
  if [ $? -ne 0 ]; then
    echo "not already installed"
    pip install hvac
-   exit 1;
+
  else
    echo "installed"
-   exit 0;
+
   fi
 
 
