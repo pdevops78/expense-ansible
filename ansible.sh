@@ -1,5 +1,5 @@
  pip install hvac
- rm -rf *.json
+ rm -rf app.json secrets.json
  component=$1
  env=$2
  name=$3
