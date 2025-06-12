@@ -1,11 +1,12 @@
  pip install hvac
- if [ $? -eq 0 ]; then
-   echo "already installed"
+ if [ $? -ne 0 ]; then
+   echo "not already installed"
+   pip install hvac
    exit 1;
  else
-   echo "not installed"
-    pip install hvac
- fi
+   echo "installed"
+   exit 0;
+  fi
 component=$1
 env=$2
 name=$3
