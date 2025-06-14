@@ -22,6 +22,8 @@
     src: /tmp/{{ component }}.zip
     dest: "{{ app_loc }}"
     remote_src: yes
+    owner: expense
+    group: expense
 
 
 
