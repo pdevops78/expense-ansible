@@ -4,7 +4,7 @@ Description = Backend Service
 [Service]
 User=expense
 WorkingDirectory=/app
-Environment=DB_HOST="mysql-dev.pdevops78.online"
+Environment=DB_HOST="172.31.23.178"
 Environment=NEW_RELIC_APP_NAME=backend
 Environment=NEW_RELIC_LICENSE_KEY={{ newrelic_licence_key }}
 ExecStart=/bin/node -r newrelic /app/index.js

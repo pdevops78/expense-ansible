@@ -46,7 +46,7 @@
     name: all
     login_user: root
     login_password: "{{ mysql_root_password }}"
-    login_host: mysql-dev.pdevops78.online
+    login_host: 172.31.23.178
     login_port: 3306
     state: import
     target: /app/schema/backend.sql
