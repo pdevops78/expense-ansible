@@ -26,7 +26,7 @@
 - name: Install npm package
   community.general.npm:
     name: npm
-    path: /app
+    path: "{{ app_loc }}"
     state: latest
 
 - name: Install Python MySQL Client

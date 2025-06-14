@@ -1,6 +1,6 @@
 - name: Install newrelic
   community.general.npm:
     name: newrelic
-    path: /app
+    path: "{{ app_loc }}"
 
 
