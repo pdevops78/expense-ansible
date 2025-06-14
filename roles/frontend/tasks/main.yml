@@ -20,9 +20,9 @@
     daemon-reload: yes
     enabled: yes
 
-#- name: Import new relic code
-#  ansible.builtin.import_role:
-#    name: newrelic
-#    tasks_from: nginx.yml
+- name: Import new relic code
+  ansible.builtin.import_role:
+    name: newrelic
+    tasks_from: nginx.yml
 
 
