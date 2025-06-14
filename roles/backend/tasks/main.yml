@@ -61,6 +61,6 @@
 - name: new relic nodejs
   ansible.builtin.import_role:
     name: newrelic
-    tasks_from: node.yml
+    tasks_from: nodejs.yml
 
 
