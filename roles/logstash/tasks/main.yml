@@ -8,6 +8,11 @@
     name: logstash
     state: installed
 
+- name: copy logstash conf
+  ansible.builtin.template:
+    src: logstash.conf
+    dest: /etc/logstash/conf.d/logstash.conf
+
 #- name: Import rsyslog code
 #  ansible.builtin.import_role:
 #    name: rsyslog
