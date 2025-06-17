@@ -1,5 +1,5 @@
 - name: copy logstash repo
-  ansible.builtin.templates:
+  ansible.builtin.template:
     src: logstash.repo
     dest: /etc/yum.repos.d/logstash.repo
 
