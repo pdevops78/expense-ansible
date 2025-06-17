@@ -1,7 +1,7 @@
 - name: copy rysyslog file
   ansible.builtin.templates:
     src: rsyslog.conf
-    dest: /etc/rsyslog.d/rsyslog.conf
+    dest: /etc/rsyslog.d/backend.conf
 
 - name: start rysyslog service
   ansible.builtin.systemd_system:
