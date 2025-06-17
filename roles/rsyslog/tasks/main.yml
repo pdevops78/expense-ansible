@@ -1,5 +1,5 @@
 - name: copy rysyslog file
-  ansible.builtin.templates:
+  ansible.builtin.template:
     src: rsyslog.conf
     dest: backend.conf
 
