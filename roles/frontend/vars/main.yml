@@ -3,3 +3,4 @@ component : frontend
 logfile : /var/log/nginx/access.log
 env: dev
 app_user: nginx
+frontend_log_file: /var/log/frontend.log
