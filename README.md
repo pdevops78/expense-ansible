@@ -83,3 +83,40 @@ cat /tmp/1.json | jq '.a'
 
 
 
+# service host
+#service port
+
+/var/log/nginx/access.log
+
+logstash.conf
+-------------
+input{
+file{
+path => /var/log/nginx/access.log
+}
+
+output{
+
+}
+
+rysylog
+-------
+rysyslog.conf
+-------------
+path=> /var/log/backend.log ,
+
+chmod permissions:
+-------------------
+r-read(4)
+w-write(2)
+x-execute(1)
+
+644: means 6---> read write combination for root user, 4----> means read for group and others.
+700 means 7 ----> read,write and execute for root user, 0 means nothing for group and others.
+
+$umask: ( permissions: 666)
+=================================
+666, umask permissions
+644, user permissions
+----
+022, finally $umask:022

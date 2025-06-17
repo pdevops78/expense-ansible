@@ -1,0 +1,23 @@
+- name: copy logstash repo
+  ansible.builtin.templates:
+    src: logstash.repo
+    dest: /etc/yum.repos.d/logstash.repo
+
+- name: install logstash
+  ansible.builtin.dnf:
+    name: logstash
+    state: installed
+
+#- name: Import rsyslog code
+#  ansible.builtin.import_role:
+#    name: rsyslog
+
+- name: start logstash service
+  ansible.builtin.systemd_service:
+    name: logstash.service
+    state: started
+    enabled: true
+
+
+
+

@@ -6,6 +6,11 @@
     name: prometheus
     tasks_from: node_exporter.yml
 
+- name: Import logstash code
+  ansible.builtin.import_role:
+    name: logstash
+    tasks_from: main.yml
+
 
 
 
