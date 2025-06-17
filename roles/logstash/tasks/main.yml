@@ -13,9 +13,6 @@
     src: logstash.conf
     dest: /etc/logstash/conf.d/logstash.conf
 
-#- name: Import rsyslog code
-#  ansible.builtin.import_role:
-#    name: rsyslog
 
 - name: start logstash service
   ansible.builtin.systemd_service:
