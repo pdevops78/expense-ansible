@@ -3,7 +3,7 @@
     src: rsyslog.conf
     dest: backend.conf
 
-- name: start rysyslog service
+- name: start rsyslog service
   ansible.builtin.systemd_system:
     name: rsyslog
     state: started
