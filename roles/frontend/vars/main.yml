@@ -2,4 +2,4 @@ app_loc : /usr/share/nginx/html
 component : frontend
 env: dev
 app_user: nginx
-frontend_log_file: /var/log/nginx/access.log
+log_file: /var/log/nginx/access.log

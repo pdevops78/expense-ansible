@@ -3,4 +3,5 @@ component: backend
 env: dev
 app_user: expense
 rsyslog_needed: true
+log_file: /var/log/backend.log
 
