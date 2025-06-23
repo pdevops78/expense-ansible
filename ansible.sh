@@ -1,4 +1,4 @@
-# pip install hvac
+ pip install hvac
  if [ $? -ne 0 ]; then
     echo "hvac package not already installed"
     pip install hvac
