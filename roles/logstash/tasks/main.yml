@@ -1,7 +1,7 @@
 - name: copy logstash repo
   ansible.builtin.template:
-    src: logstash.repo
-    dest: /etc/yum.repos.d/logstash.repo
+    src: elasticsearch.repo
+    dest: /etc/yum.repos.d/elasticsearch.repo
 
 - name: install logstash
   ansible.builtin.dnf:
