@@ -6,16 +6,16 @@
     name: prometheus
     tasks_from: node_exporter.yml
 
-- name: Import logstash code
-  ansible.builtin.import_role:
-    name: logstash
-    tasks_from: main.yml
-
-- name: Import rsyslog code
-  ansible.builtin.import_role:
-    name: rsyslog
-    tasks_from: main.yml
-  when: rsyslog_needed
+#- name: Import logstash code
+#  ansible.builtin.import_role:
+#    name: logstash
+#    tasks_from: main.yml
+#
+#- name: Import rsyslog code
+#  ansible.builtin.import_role:
+#    name: rsyslog
+#    tasks_from: main.yml
+#  when: rsyslog_needed
 
 
 
