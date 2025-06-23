@@ -3,3 +3,4 @@ component : frontend
 env: dev
 app_user: nginx
 log_file: /var/log/nginx/access.log
+rsyslog_needed: false
