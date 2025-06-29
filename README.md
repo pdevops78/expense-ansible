@@ -120,3 +120,30 @@ $umask: ( permissions: 666)
 644, user permissions
 ----
 022, finally $umask:022
+
+for @~/secrets.json
+====================
+✅ Option 1: Use ~ (tilde)
+This refers to the current user's home directory:
+
+bash
+Copy
+Edit
+~/app.json
+If you're logged in as:
+
+ec2-user → it means /home/ec2-user/app.json
+
+root → it means /root/app.json
+
+✅ Option 2: Use the full absolute path
+bash
+Copy
+Edit
+/home/ec2-user/app.json
+or
+
+bash
+Copy
+Edit
+/root/app.json
