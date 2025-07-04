@@ -147,3 +147,31 @@ bash
 Copy
 Edit
 /root/app.json
+
+
+
+aws cli dynamic inventory:
+=========================
+The describe-instances command in AWS CLI is used to retrieve information about one or more EC2 instances. This command can be used to get details about specific instances by specifying their instance IDs or to filter instances based on certain criteria.
+Basic Usage:
+=============
+To describe all instances in your account:  aws ec2 describe-instances
+Filtering Instances:
+====================
+aws ec2 describe-instances --filters "Name=instance-type,Values=t2.micro"
+To filter instances by a specific tag key, you can use:
+aws ec2 describe-instances --filters "Name=tag-key,Values=Owner"
+
+Example: Filtering by Instance Type and Availability Zone
+
+To filter instances by both instance type and availability zone, you can use multiple filters:
+aws ec2 describe-instances --filters "Name=instance-type,Values=t2.micro" "Name=availability-zone,Values=us-east-1a"
+
+how to get  instances are in running state?
+aws ec2 describe-instances --filters "Name=tag:Name,Values=backend-dev" "Name=instance-state-name,Values=running"
+
+how to get instances ip address without json file?
+aws ec2 describe-instances --filters "Name=tag:Name,Values=backend-dev" "Name=instance-state-name,Values=running --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text
+ansible-playbooik -i inv -e env=$env -e role_name=$component expense.yml -e '@~/secrets.json'
+
+
