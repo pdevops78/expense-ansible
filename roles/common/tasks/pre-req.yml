@@ -12,7 +12,7 @@
 
 - name: Download {{component}}
   ansible.builtin.get_url:
-    url: https://expense-artifacts.s3.amazonaws.com/expense-{{ component }}-v2.zip
+    url: http://{{artifactory_user}}:{{artifactory_password}@98.81.31.126/artifactory/expense-frontend/v3.zip
     dest: /tmp/{{ component }}.zip
     owner: "{{ app_user }}"
     group: "{{ app_user }}"
