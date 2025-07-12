@@ -16,7 +16,9 @@
   ansible-playbook -i $component-$env.pdevops78.online, expense.yml -e component_name=$component -e env=$env -e '@~/secrets.json'
 
 # get all running instances from aws service
+aws ec2 describe-instances --filters Name=tag:Name,Values=$component-$env" "Name=instance-state-name,Values=running --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text >inv
 
+ansible-playbook -i inv -e env=$env -e role_name=$component expense.yml -e '@~/secrets.json'
  rm -rf *.json
 
 
