@@ -17,7 +17,7 @@
     owner: "{{ app_user }}"
     group: "{{ app_user }}"
 
-- name: Unarchive {{component}}
+- name: Unarchive artifactory
   ansible.builtin.unarchive:
     src: /tmp
     dest: "{{ app_loc }}"
