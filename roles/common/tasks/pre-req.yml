@@ -13,13 +13,13 @@
 - name: Download {{component}}
   ansible.builtin.get_url:
     url: http://{{artifactory_user}}:{{artifactory_password}}@13.222.138.152:8081/artifactory/expense-frontend/{{app_version}}.zip
-    dest: /tmp/{{ app_version }}.zip
+    dest: /tmp
     owner: "{{ app_user }}"
     group: "{{ app_user }}"
 
 - name: Unarchive {{component}}
   ansible.builtin.unarchive:
-    src: /tmp/{{ app_version }}.zip
+    src: /tmp
     dest: "{{ app_loc }}"
     remote_src: yes
     owner: "{{ app_user }}"
