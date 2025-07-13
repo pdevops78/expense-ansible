@@ -19,11 +19,11 @@
 
 - name: Unarchive artifactory
   ansible.builtin.unarchive:
-    src: /tmp
+    src: /tmp/v4.zip
     dest: "{{ app_loc }}"
     remote_src: yes
     owner: "{{ app_user }}"
     group: "{{ app_user }}"
 
 
-# http://{{artifactory_user}}:{{artifactory_password}}@artifactory-internal.pdevops78.online:8081/artifactory/expense-{{ component }}/{{APP_VERSION}}.zip
+
