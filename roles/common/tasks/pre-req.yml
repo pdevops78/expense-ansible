@@ -12,7 +12,7 @@
 
 - name: Download artifactory
   ansible.builtin.get_url:
-    url: http://{{artifactory_user}}:{{artifactory_password}}@13.222.138.152:8081/artifactory/expense-frontend/{{app_version}}.zip
+    url: http://admin:Artifact123@13.222.138.152:8081/artifactory/expense-frontend/{{app_version}}.zip
     dest: /tmp
     owner: "{{ app_user }}"
     group: "{{ app_user }}"
