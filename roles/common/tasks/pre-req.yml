@@ -26,4 +26,4 @@
     group: "{{ app_user }}"
 
 
-
+# http://{{artifactory_user}}:{{artifactory_password}}@artifactory-internal.pdevops78.online:8081/artifactory/expense-{{ component }}/{{APP_VERSION}}.zip
