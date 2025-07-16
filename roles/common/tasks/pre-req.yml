@@ -2,6 +2,8 @@
   ansible.builtin.file:
     path: "{{ app_loc }}"
     state: absent
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
 
 - name: Make a directory
   ansible.builtin.file:
@@ -23,8 +25,7 @@
   ansible.builtin.get_url:
     url: http://admin:Artifact123@artifact-internal.pdevops78.online:8081/artifactory/expense-{{component}}/1.0.zip
     dest: /tmp
-    owner: "{{ app_user }}"
-    group: "{{ app_user }}"
+
 
 - name: Unarchive artifactory
   ansible.builtin.unarchive:
