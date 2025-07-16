@@ -27,7 +27,7 @@
 - name: Get DB Info credentials
   community.mysql.mysql_info:
     login_user: root
-    login_password: "{{ mysql_root_password }}"
+    login_password: ExpenseApp@1
     login_host: mysql-dev.pdevops78.online
     filter: version
   register: mysql_connection_output
@@ -38,7 +38,7 @@
     msg: "{{mysql_connection_output}}"
 
 - name: Set Rootpassword
-  ansible.builtin.shell: mysql_secure_installation --set-root-pass {{ mysql_root_password }}
+  ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
   when: mysql_connection_output.failed is true
 
 
