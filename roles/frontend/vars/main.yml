@@ -1,5 +1,5 @@
 app_loc : /usr/share/nginx/html
-component : frontend
+component : frontend.yml
 env: dev
 app_user: nginx
 log_file: /var/log/nginx/access.log
