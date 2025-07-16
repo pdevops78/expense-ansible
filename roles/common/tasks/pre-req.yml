@@ -29,7 +29,7 @@
 
 - name: Download and Unarchive artifactory
   ansible.builtin.unarchive:
-    src: http://admin:Artifact123@artifact-internal.pdevops78.online:8082/artifactory/expense-{{component}}/1.0.zip
+    src: http://admin:Artifact123@artifactory-internal.pdevops78.online:8082/artifactory/expense-{{component}}/1.0.zip
     dest: "{{ app_loc }}"
     remote_src: yes
     owner: "{{ app_user }}"
